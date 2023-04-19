@@ -9,6 +9,7 @@ import {
 import { useSession } from "next-auth/react";
 import toast from "react-hot-toast";
 import { fetchComments } from "../../utils/fetchComments";
+import { timeAgo } from "../../utils/timeAgo";
 
 interface Props {
   tweet: Tweet;
@@ -83,7 +84,7 @@ function Tweet({ tweet }: Props) {
               @{tweet.username.replace(/\s+/g, "").toLowerCase()} ·
             </p>
 
-            <p>{tweet._createdAt}</p>
+            <p>{timeAgo(tweet._createdAt)}</p>
           </div>
 
           <p className="pt-1">{tweet.text}</p>
@@ -153,7 +154,7 @@ function Tweet({ tweet }: Props) {
                     @{comment.username.replace(/\s+/g, "").toLowerCase()} ·
                   </p>
 
-                  <p>{comment._createdAt}</p>
+                  <p>{timeAgo(comment._createdAt)}</p>
                 </div>
                 <p>{comment.comment}</p>
               </div>

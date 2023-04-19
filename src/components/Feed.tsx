@@ -18,7 +18,6 @@ function Feed({ tweets: tweetsProp }: Props) {
 
     const tweets = await fetchTweets();
     setTweets(tweets);
-    console.log("Feed");
     toast.success("Contenu mis à jour !", {
       id: refreshToast,
     });
