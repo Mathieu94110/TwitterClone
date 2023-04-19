@@ -1,5 +1,7 @@
 export const timeAgo = (date: string) => {
-  const seconds = Math.floor((new Date() - new Date(date)) / 1000);
+  const seconds: number = Math.floor(
+    (new Date().getTime() - new Date(date).getTime()) / 1000
+  );
   let year = Math.floor(seconds / 31536000);
   if (year >= 1) {
     return year === 1 ? "Il y a 1 an" : `Il y a ${year} ans`;
