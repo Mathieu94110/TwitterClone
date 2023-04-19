@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { useSession, signIn, signOut } from "next-auth/react";
 import SidebarRow from "./SideBarRow";
 import {
@@ -15,9 +16,12 @@ function Sidebar() {
   const { data: session } = useSession();
   return (
     <div className="col-span-2 flex flex-col items-center px-4 md:items-start">
-      <img
+      <Image
         src="https://ra.ac.ae/wp-content/uploads/2020/01/logo-twitter-icon-symbol-0.png"
-        className="m-3 h-10 w-10"
+        alt="logo twitter"
+        className="m-3"
+        width={10}
+        height={10}
       />
       <SidebarRow Icon={HomeIcon} title="Accueil" />
       <SidebarRow Icon={HashtagIcon} title="Explorer" />

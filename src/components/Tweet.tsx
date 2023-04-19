@@ -74,7 +74,7 @@ function Tweet({ tweet }: Props) {
             tweet.profileImg ||
             "https://boutique-lamainbleue.com/wp-content/uploads/2016/09/female-silhouette.jpg"
           }
-          alt=""
+          alt={tweet.username}
         />
 
         <div>
@@ -93,7 +93,7 @@ function Tweet({ tweet }: Props) {
             <img
               src={tweet.image}
               className="m-5 mb-1 ml-0 max-h-60  rounded-lg object-cover shadow-sm"
-              alt=""
+              alt={tweet.username}
             />
           )}
         </div>

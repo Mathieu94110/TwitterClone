@@ -6,14 +6,7 @@ import {
   MapPinIcon,
 } from "@heroicons/react/24/solid";
 import { useSession } from "next-auth/react";
-import {
-  Dispatch,
-  FormEvent,
-  MouseEvent,
-  SetStateAction,
-  useRef,
-  useState,
-} from "react";
+import { Dispatch, MouseEvent, SetStateAction, useRef, useState } from "react";
 import toast from "react-hot-toast";
 import { Tweet, TweetBody } from "../../typings";
 import { fetchTweets } from "../../utils/fetchTweets";
@@ -135,7 +128,7 @@ function TweetBox({ setTweets }: Props) {
                 onClick={addImageToTweet}
                 className="index:100 bh-white text-white ml-2 font-bold"
               >
-                Ajouter l'image
+                Ajouter l&apos;image
               </button>
             </form>
           )}

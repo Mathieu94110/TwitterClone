@@ -1,7 +1,12 @@
 import { MouseEventHandler, SVGProps } from "react";
 
 interface Props {
-  Icon: (props: SVGProps<SVGSVGElement>) => JSX.Element;
+  Icon: React.ForwardRefExoticComponent<
+    React.PropsWithoutRef<React.SVGProps<SVGSVGElement>> & {
+      title?: string;
+      titleId?: string;
+    } & React.RefAttributes<SVGSVGElement>
+  >;
   title: string;
   onClick?: () => {};
 }
